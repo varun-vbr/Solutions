@@ -1,0 +1,95 @@
+
+
+.container {
+    max-width: 80vw;
+    margin: 8rem auto;
+    background-color: #faf9f9;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+
+    min-height: 120vh;
+    
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: 1px solid #f4f2f2;;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text{
+    margin: 2rem;
+    color:rgb(118, 16, 165)
+}
+
+.content {
+    display: flex;
+    height:100vh;
+}
+
+.sidebar {
+    background-color: #333;
+
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+    padding-left: 0px;
+}
+
+.navlink:link,
+.navlink:visited {
+        color: #faf9f9;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+}
+
+.navitem {
+    position: relative;
+}
+
+.navitem:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.navitem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #216ade;
+    transform: scaleY(0);
+    transition: transform .2s,
+                width .4s cubic-bezier(1,0,0,1) .2s,
+                background-color .1s;
+}
+
+.navitem:hover::before,
+.navitem--active::before {
+    transform: scaleY(1);
+    width: 100%;
+}
+
+.navitem:active::before {
+    background-color: #216ade;
+}
