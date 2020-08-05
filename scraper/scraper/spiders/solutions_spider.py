@@ -6,7 +6,7 @@ class SolutionsSpiderSpider(scrapy.Spider):
     name = 'solutions-spider'
     allowed_domains = ['stackoverflow.com']
     start_urls = ['https://stackoverflow.com/questions/tagged/java']
-    pages=["java", "javascript", "python", "c++", "typescript", "sql"]
+    pages=["java", "javascript", "python", "cPlusPlus", "typescript", "sql"]
     index=0
     def parse(self, response):
         questions=[]
@@ -32,5 +32,6 @@ class SolutionsSpiderSpider(scrapy.Spider):
         yield {objName:questions}
         self.index+=1
         if self.index < 6:
-            next_page_url='https://stackoverflow.com/questions/tagged/'+self.pages[self.index]
+            pageName="c++" if self.pages[self.index] == "cPlusPlus" else self.pages[self.index]
+            next_page_url='https://stackoverflow.com/questions/tagged/'+pageName
             yield scrapy.Request(next_page_url, callback=self.parse)

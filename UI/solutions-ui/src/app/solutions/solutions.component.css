@@ -23,7 +23,8 @@
 
 .header-text{
     margin: 2rem;
-    color:rgb(118, 16, 165)
+    color:rgb(118, 16, 165);
+    font-weight: bold;
 }
 
 .content {
@@ -93,3 +94,50 @@
 .navitem:active::before {
     background-color: #216ade;
 }
+
+.topic{
+  width:95%; 
+  margin: 20px; 
+  color:#0b39d3;
+  border-bottom:1px solid #CCCC;
+}
+
+.listing{
+    width:95%; 
+    margin: 20px;
+    background: #f4f2f2;
+}
+
+.views{
+    margin: 10px;
+    justify-content: flex-start;
+}
+
+.details{
+    margin: 10px;
+    justify-content: flex-end;
+
+}
+
+.post-details{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.question{
+   padding-top: 5px; 
+   margin:10px;
+}
+
+.description{
+    margin:10px;
+}
+
+.legal {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    padding: 2.5rem;
+}
+

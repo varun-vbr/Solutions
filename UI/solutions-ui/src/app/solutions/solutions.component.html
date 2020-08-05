@@ -1,33 +1,38 @@
     <div class="container">
         <header class="header">
-            <h2 class="header-text">Solutions</h2>
+            <h1 class="header-text">SOLUTIONS</h1>
         </header>
         <mat-sidenav-container class="content">
             <mat-sidenav mode="side" opened class="sidebar">
                 <nav>
                     <ul class="side-nav">
                         <li class="navitem">
-                            <a href="#" class="navlink">
+                            <a href="#java" class="navlink">
                                 <span>Java</span>
                             </a>
                         </li>
                         <li class="navitem">
-                            <a href="#" class="navlink">
+                            <a href="#javascript" class="navlink">
                                 <span>Javascript</span>
                             </a>
                         </li>
                         <li class="navitem">
-                            <a href="#" class="navlink">
+                            <a href="#python" class="navlink">
                                 <span>Python</span>
                             </a>
                         </li>
                         <li class="navitem">
-                            <a href="#" class="navlink">
+                            <a href="#cPlusPlus" class="navlink">
                                 <span>C++</span>
                             </a>
                         </li>
                         <li class="navitem">
-                            <a href="#" class="navlink">
+                            <a href="#typescript" class="navlink">
+                                <span>Typescript</span>
+                            </a>
+                        </li>
+                        <li class="navitem">
+                            <a href="#sql" class="navlink">
                                 <span>SQL</span>
                             </a>
                         </li>
@@ -38,7 +43,104 @@
                     </div>
                 </nav>
             </mat-sidenav>
-            <mat-sidenav-content>Main content</mat-sidenav-content>
+            <mat-sidenav-content>
+                <div>
+                    <h3 id="java" class="topic">Java</h3>
+                    <div class="listing" *ngFor="let listing of solutions[0].java">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="javascript" class="topic">Javascript</h3>
+                    <div class="listing" *ngFor="let listing of solutions[1].javascript">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="python" class="topic">Python</h3>
+                    <div class="listing" *ngFor="let listing of solutions[2].python">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="cPlusPlus" class="topic">C++</h3>
+                    <div class="listing" *ngFor="let listing of solutions[3].cPlusPlus">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="typescript" class="topic">Typescript</h3>
+                    <div class="listing" *ngFor="let listing of solutions[4].typescript">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="sql" class="topic">SQL</h3>
+                    <div class="listing" *ngFor="let listing of solutions[5].sql">
+                        <h4 class="question"><a href={{listing.url}} target="_blank">{{listing.question}}</a></h4>
+                        <p class="description">{{listing.description}}</p>
+                        <div class="post-details">
+                            <div class="views">
+                                {{listing.views}}
+                            </div>
+                            <div class="details">
+                                <p>{{listing.time}}</p>
+                                <p>{{listing.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                    
+                </div>
+            </mat-sidenav-content>
           </mat-sidenav-container>
         
     </div>
